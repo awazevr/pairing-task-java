@@ -47,9 +47,7 @@ public class AreaFinderTest {
 
 		@Override
 		public void consumePoint(DataPoint point) {
-			if (rect.contains(point)) {
-				results.add(point);
-			}
+			//todo : implement
 		}
 
 		public List<DataPoint> getConsumedPoints(){
