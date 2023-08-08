@@ -1,17 +1,16 @@
 package area;
 
-
 import java.util.Collection;
 
 public class BruteForceAreaFinder implements AreaFinder {
 
     Collection<DataPoint> fullDataSet;
 
-    public static BruteForceAreaFinder constructFrom(Collection<DataPoint> dataPoints){
+    public static BruteForceAreaFinder constructFrom(Collection<DataPoint> dataPoints) {
         return new BruteForceAreaFinder(dataPoints);
     }
 
-    private BruteForceAreaFinder(Collection<DataPoint> dataPoints){
+    private BruteForceAreaFinder(Collection<DataPoint> dataPoints) {
         fullDataSet = dataPoints;
     }
 

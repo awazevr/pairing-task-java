@@ -1,30 +1,30 @@
 package area;
 
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
-
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class RectangleTest {
 
     @Test
-    public void testNullRectangle(){
+    public void testNullRectangle() {
         Rectangle rect = new Rectangle();
         DataPoint point = new DataPoint(0f, 0f);
         assertFalse(rect.contains(point));
     }
 
     @Test
-    public void testInside(){
-        Rectangle rect = new Rectangle(0,0,2,2);
-        DataPoint point = new DataPoint(1,1);
+    public void testInside() {
+        Rectangle rect = new Rectangle(0, 0, 2, 2);
+        DataPoint point = new DataPoint(1, 1);
         assertTrue(rect.contains(point));
     }
 
     @Test
-    public void testOutside(){
-        Rectangle rect = new Rectangle(0,0,2,2);
-        DataPoint point = new DataPoint(3,3);
+    public void testOutside() {
+        Rectangle rect = new Rectangle(0, 0, 2, 2);
+        DataPoint point = new DataPoint(3, 3);
         assertFalse(rect.contains(point));
     }
 }
